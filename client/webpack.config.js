@@ -28,19 +28,19 @@ module.exports = () => {
         short_name:"J.A.T.E",
         description:"A text editor that can be downloaded!",
         background_color:"#225ca3",
-        theme_color:"225ca3",
+        theme_color:"#225ca3",
         start_url:"./",
         publicPath:"./",
         icons:[{
-          src: path.resolve("assets/images/logo.png"),
+          src: path.resolve("src/images/logo.png"),
           sizes:[96,128,192,256,384,512],
           destination: path.join("assets","icons")
         },],
       }),
       
       new InjectManifest ({
-        swSrc:"./src/sw.js",
-        swDest: "sw.js"
+        swSrc:"./src-sw.js",
+        swDest: "src-sw.js"
       })
     ],
 
