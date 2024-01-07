@@ -36,13 +36,13 @@ export const getDb = async () => {
   
   console.log("GET all from the database");
 
-  const JateDb = await openDB("jate", 1||2);  //dont know if this will work but this is in because sometimes if you dont delete the header and deploy text it will save it as number 2 i believe
+  const JateDb = await openDB("jate", 1); 
 
   const transaction = JateDb.transaction("jate", "readonly");
 
   const store = transaction.objectStore("jate");
 
-  const request = store.get(1);
+  const request = store.getAll();
 
   const result = await request;
 
